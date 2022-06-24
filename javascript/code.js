@@ -58,12 +58,12 @@ function deleteTask(index){
     listArr=JSON.parse(getLocalStorage);
     listArr.splice(index,1)//delete index 1
     localStorage.setItem("new todo",JSON.stringify(listArr));
-    showTasks();
+    showTask();
 }
 
 //delete all task function
 deleteAllbtn.onclick=()=>{
     listArr=[];
     localStorage.setItem("new todo",JSON.stringify(listArr));
-    showTasks();
+    showTask();
 }
