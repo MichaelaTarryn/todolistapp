@@ -80,6 +80,10 @@ body{
     overflow:hidden;
 }
 
+#check{
+    height: 1rem;
+}
+
 /*style the bootrap icon*/
 .todoList li span{
     position: absolute;
@@ -104,7 +108,7 @@ right: 0px;
     justify-content: space-between;
 }
 .footer button{
-    width: 60px;
+    width: 80px;
     height: 100%;
     border:none;
     outline:none;
@@ -113,6 +117,10 @@ right: 0px;
     font-size: 16px;
     cursor: pointer;
     border-radius: 3px;
-    padding: 6px;
+    padding: 4px;
 
+}
+
+input[type="checkbox"]:checked+li{
+    text-decoration: line-through;
 }

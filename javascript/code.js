@@ -46,24 +46,26 @@ function showTask(){
         }
     let newLitag="";
     listArr.forEach((element,index )=> {
-        newLitag +=`<li>${element}<span onclick="deleteTask(${index})";><i class="bi bi-trash-fill"></i></span></li>`
+        newLitag +=`<input id="check" type="checkbox"><li>${element}<span onclick="deleteTask(${index})";><i class="bi bi-trash-fill"></i></span></li>`
     });
     todoList.innerHTML=newLitag;//adding new li tag inside ul tag
-    inputbox.value="";
+    inputbox.value=""; // once task added leave the input field blank0
 }
 
 //delete task function
 function deleteTask(index){
     let getLocalStorage=localStorage.getItem("new todo");
     listArr=JSON.parse(getLocalStorage);
-    listArr.splice(index,1)//delete index 1
+    listArr.splice(index,1)//delete the particular indexed li 
+    //after the remove the li again update the local storage
     localStorage.setItem("new todo",JSON.stringify(listArr));
     showTask();
 }
 
 //delete all task function
 deleteAllbtn.onclick=()=>{
-    listArr=[];
+    listArr=[];//empty the array
+    //after delete all task again update the local storage
     localStorage.setItem("new todo",JSON.stringify(listArr));
-    showTask();
+    showTask(); //calling showtasks function
 }
