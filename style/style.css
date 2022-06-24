@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+
+}
+
+.wrapper{
+    margin:120px auto;
+    max-width: 400px;
+    width: 100%;
+    background:rgb(217, 197, 197);
+    border-radius: 5px;
+    padding: 25px;
+
+}
+
+.wrapper header1{
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.inputfield{
+    display:flex;
+    height: 45px;
+    width:100%;
+    margin:20px 0;
+}
+
+.inputfield input{
+    width:85%;
+    height: 100%;
+    border:1px solid lightpink;
+    font-size:17px;
+    border-radius: 3px;
+    padding-left: 15px;
+}
+
+.inputfield button{
+    width: 60px;
+    height: 100%;
+    border:none;
+    outline:none;
+    background: purple;
+    color: aliceblue;
+    font-size: 22px;
+    cursor: pointer;
+    border-radius: 3px;
+    margin-left: 5px;
+    opacity: 0.6;
+    pointer-events: none;
+}
+.inputfield button.active{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.wrapper.todoList{
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+/* style the list*/
+
+.todoList li{
+    list-style: none;
+    height: 45px;
+    line-height: 45px;
+    position: relative;
+    background-color: antiquewhite;
+    border-radius: 3px;
+    margin-bottom: 8px;
+    padding:0 15px;
+    cursor:default;
+    overflow:hidden;
+}
+
+/*style the bootrap icon*/
+.todoList li span{
+    position: absolute;
+    right:-45px;
+    color: rebeccapurple;
+    width: 45px;
+    text-align: center;
+    background-color: black;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+    /*pop up icon*/
+    transition: all 0.3s ease;
+}
+.todoList li:hover span{
+right: 0px;
+}
+
+.wrapper .footer{
+    display: flex;
+    width:100%;
+    margin-top:25px;
+    justify-content: space-between;
+}
+.footer button{
+    width: 60px;
+    height: 100%;
+    border:none;
+    outline:none;
+    background: purple;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 3px;
+    padding: 6px;
+
+}
