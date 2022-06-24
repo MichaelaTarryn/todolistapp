@@ -120,6 +120,24 @@ right: 0px;
     padding: 4px;
 
 }
+.wrapper .sort{
+    display: flex;
+    width:100%;
+    margin-top:10px;
+    justify-content: space-between;
+}
+.sort button{
+    width: 80px;
+    height: 100%;
+    border:none;
+    outline:none;
+    background: purple;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 3px;
+    padding: 4px;
+}
 
 input[type="checkbox"]:checked+li{
     text-decoration: line-through;
